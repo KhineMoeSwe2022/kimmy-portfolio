@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kimmy Portfolio</title>
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  
+  <link href="style.css" rel="stylesheet">
+   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="css/mmenu.css" rel="stylesheet" />
+  
+    <script src="js/mmenu.js"></script>
+        
+</head>
+<body class="text-gray-800 bg-white">
+<div  id="page" class="lg:container mx-auto px-6 2xl:px-[70px]">
+  <div class="flex flex-wrap lg:flex-nowrap gap-0"> 
+    <header class="w-full lg:w-[20%] lg:py-[50px] lg:h-screen lg:sticky lg:top-0 max-lg:flex max-lg:items-center max-lg:justify-between">
+        <div class="text-5xl logo">
+          <a href="index.html" class="hover:no-underline focus:no-underline"><img src="images/kimmy-logo.png" alt="Kimmy Logo" class="w-[100px] lg:w-[220px] h-auto mx-auto my-0"></a>
+        </div>
+        <div class="desktop-menu max-lg:hidden">
+          <nav id="desktop-menu" class="text-sm md:text-base text-center">
+              <a href="index.html" class="block uppercase font-bold tracking-[1px] my-[10px] transition active">Home</a>
+              <a href="about.html" class="block uppercase font-bold tracking-[1px] my-[10px] transition">About</a>
+              <a href="activity.html" class="block uppercase font-bold tracking-[1px] my-[10px] transition">Activity</a>
+              <a href="contact.html" class="block uppercase font-bold tracking-[1px] my-[10px] transition">Contact</a>
+            </nav>
+            <div class="social text-lg space-x-3 text-center mt-[40px]">
+          <a href="https://www.linkedin.com/in/khine-moe-swe-b308a7239" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto: dev.khinemoeswe@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        </div>
+        <div class="mobile-menu lg:hidden">
+           <a href="#mobile-menu"><span class="mobile-bar"><i class="fa-solid fa-bars"></i></span></a>
+            
+            <nav id="mobile-menu" class="text-sm md:text-base text-center">
+              <ul>
+                <li><a href="index.html" class="block uppercase font-medium tracking-[1px] transition active">Home</a></li>
+                <li><a href="about.html" class="block uppercase font-medium tracking-[1px] transition">About</a></li>
+                <a href="activity.html" class="block uppercase font-bold tracking-[1px] my-[10px] transition">Activity</a>
+                <li><a href="contact.html" class="block uppercase font-medium tracking-[1px] transition">Contact</a></li>
+                <li> <a href="https://www.linkedin.com/in/khine-moe-swe-b308a7239" target="_blank" class="text-right"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="mailto: dev.khinemoeswe@gmail.com" target="_blank" class="text-left"><i class="fa-solid fa-envelope"></i></a></li>
+              </ul>  
+            </nav>
+
+            
+          
+        </div>
+    </header>
+
+    
+    <main class="lg:pl-[100px] xl:pl-[150px] lg:pr-4 lg:w-[80%]  pt-[10px] sm:pt-[30px] lg:pt-[50px] pb-[10px] min-h-screen flex flex-col">
+    
+      <div class="flex flex-1 flex-wrap gap-3 justify-center items-center">
+        <div class="col1 w-full">
+          <h1 class="text-[32px] lg:text-[40px] 2xl:text-[60px] font-bold about-title mb-8">Hello !!!<br> I'm Khine Moe Swe (Kimmy)</h1>
+          <h4 class="text-[20px] lg:text-[26px] 2xl:text-[30px]">Customer Service | Cashier | Host | Server</h4>
+          <img src="images/kimmy-career-switch.png" alt="Environment Vector" class="w-full h-auto mx-auto mt-[80px] mb-[40px]">
+        </div>
+      </div>
+      <footer class="mt-10 text-center lg:text-right  text-xs lg:text-sm text-gray-500">
+        © <script>document.write(new Date().getFullYear());</script> All Rights Reserved | Developed by <span>Kimmy</span>
+      </footer>
+    </main>
+  </div>
+</div>
+  
+<script>
+let mmenu;
+
+function initMobileMenu() {
+  if (window.innerWidth < 1024 && !mmenu) {
+    mmenu = new Mmenu("#mobile-menu", {
+     navbars: [
+              {
+                position: "top",
+                content: [
+                    "prev",
+                  "close"
+                ]
+              }
+            ],
+      "offCanvas": {
+          "position": "right"
+        },
+
+        "theme": "light"
+    });
+  }
+}
+
+initMobileMenu();
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 1024 && !mmenu) {
+    initMobileMenu();
+  }
+});
+
+
+        </script>    
+</body>
+</html>
