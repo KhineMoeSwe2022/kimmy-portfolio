@@ -131,6 +131,12 @@ footer span{
 .section-form textarea:focus-visible{
    outline: unset;
 }
+.section-certificate ul{
+   list-style-type: square;
+}
+.section-certificate ul li::marker {
+  color: var(--brand-color); 
+}
 /* ///////////// */
 
 .submit-container button{
